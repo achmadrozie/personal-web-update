@@ -1,0 +1,96 @@
+:root {
+    --color1: #494E53;
+    --color2: #7A8388;
+    --color4: #52ADC8;
+    /* text: 1rem; */
+  }
+
+nav {
+    background-color: var(--color1);
+    color: aliceblue;
+}
+
+nav .nav-link,
+nav .navbar-brand {
+    color: var(--color2);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-decoration: none; /* Menghilangkan garis muncul secara default */
+    position: relative; /* Menetapkan posisi relative untuk elemen yang akan memiliki garis bawah */
+}
+nav .nav-link,
+nav .navbar-brand {
+    color: var(--color2);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    position: relative;
+    text-decoration: none;
+}
+
+nav .nav-link::before,
+nav .navbar-brand::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0; /* Muncul dari kiri */
+    width: 0;
+    height: 2px;
+    background-color: var(--color2);
+    transition: width 0.3s ease-in-out;
+}
+
+nav .nav-link:hover::before,
+nav .navbar-brand:hover::before {
+    width: 100%; /* Muncul sepenuhnya saat hover */
+}
+
+body {
+    color: var(--color1);
+}
+
+img {
+    max-width: 100%;
+    max-width: 6rem;
+}
+
+.rounded-circle {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Syntax: horizontal-offset vertical-offset blur-radius color */
+}
+
+.socmed img {
+    max-block-size: 1.1rem;
+    
+}
+.socmed p {
+    font-size: 0.8rem;
+    color: var(--color2);
+    
+}
+
+@media (min-width: 767px) {
+    .socmed a {
+        color: var(--color4);
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+        margin-left: 1rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .socmed a {
+        color: var(--color4);
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+        margin-left: 1.25rem;
+        padding-inline-end: 0.5rem;
+        /* width: 25%; */
+    }
+}
+
+.socmed a:hover {
+    color: var(--color4); /* Ganti warna sesuai kebutuhan */
+}
+
+ul li a {
+    color: var(--color4); /* Ganti dengan warna yang Anda inginkan */
+    text-decoration: underline;
+}
